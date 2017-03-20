@@ -10,29 +10,49 @@
 	
 	<body>
 		<div class="container-fluid">
-			<div class="row col-md-4 col-md-offset-4">
-				<div class="btn-group btn-group-justified">
-					<div class="btn-group">
-						<button type="button" class="btn btn-default">All</button>
-					</div>
-					<div class="btn-group">
-						<button type="button" class="btn btn-default">Online</button>
-					</div>
-					<div class="btn-group">
-						<button type="button" class="btn btn-default">Offline</button>
+			
+			<div class="row">
+				<div class="col-md-5 col-md-offset-5">
+					<div class="btn-group btn-group-justified" data-toggle="buttons">
+						<div class="btn-group">
+							<button type="button" id="all"class="btn btn-default btn-info active">All</button>
+						</div>
+						<div class="btn-group">
+							<button type="button" id ="online"class="btn btn-default btn-success">Online</button>
+						</div>
+						<div class="btn-group">
+							<button type="button" id ="offline"class="btn btn-default btn-danger">Offline</button>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div  class="col-md-4 col-md-offset-4" id = "content">
+				<div  class="col-md-5 col-md-offset-5" id = "search">
+					<form id="searchButton">
+						<input type="search" id="searchQuery" onkeyup= "filter(this)" placeholder="Search for someone...">
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div  class="col-md-5 col-md-offset-5" id = "content">
+					<ul id="streams" class="list-group">
+						
+					</ul>
 					
 				</div>
 			</div>
 		</div>
+	
+	
 		
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://use.fontawesome.com/c6fbf1870f.js"></script>
 	<script src="scripts.js"></script>
+	<script>
+		$("#all").on('click', function(){
+			$("#all").button("toggle");
+		});
+	</script>
 	</body>
 </html>

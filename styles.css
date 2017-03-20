@@ -1,7 +1,18 @@
 body{
 	background: green !important;
 }
-
 .btn-group{
-	display: inline-block !important:
+	width: 100% !important;
+}
+input{
+	width: 100%;
+}
+li img{
+	margin: 10px !important;
+	max-width: 150px !important;
+	display: inline-block !important;
+}
+
+li{
+	border: 1px solid black !important;
 }
